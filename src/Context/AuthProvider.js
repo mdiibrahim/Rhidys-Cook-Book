@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
         user,
         setToaster: setSpinner,
         logOut,
-        toaster: spinner,
+        spinner,
         registerWithGoogle,
         setUser
     }

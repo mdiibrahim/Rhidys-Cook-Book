@@ -1,4 +1,5 @@
 import Main from "../Layout/Main";
+import Error from "../Pages/404/404";
 import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Blogs></Blogs>
+            },
+            {
+                path: '/*',
+                element: <Error></Error>
             }
         ]
     }
