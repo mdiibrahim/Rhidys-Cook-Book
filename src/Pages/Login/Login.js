@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
-import { BsGithub } from 'react-icons/bs';
 import { useContext } from 'react';
 
 import toast from 'react-hot-toast';
@@ -46,6 +45,9 @@ const Login = () => {
                     });
                     setUser(user);
                     navigate(from, { replace: true });
+                }
+                else {
+                    toast.error("User not found");
                 }
 
 
@@ -92,7 +94,7 @@ const Login = () => {
                     </div>
                     <div className="text-center ">
                         <h1 className="text-5xl font-bold ">Log in <br /><strong className='text-xl font-bold'>Rhidys Cook Book</strong></h1>
-                        <p className="py-6">Eat, Bite & Enjoy</p>
+                        <p className="py-6">Eat, Bite & Sleep</p>
                     </div>
                 </div>
             </div>
