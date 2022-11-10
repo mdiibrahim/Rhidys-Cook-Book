@@ -15,7 +15,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <span className="footer-title">Company</span>
-                        <Link to='/register'>Sign Up</Link>
+                        <Link to='/signup'>Sign Up</Link>
                         <Link to='/login'>Log In</Link>
                         <Link>Contact</Link>
                     </div>
@@ -27,7 +27,7 @@ const Footer = () => {
                 </footer>
                 <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
                     <div className="items-center grid-flow-col">
-                        <img src="Code for Chill-1.png" className='w-20' alt="" />
+                        <img src="logo.png" className='w-16' alt="" />
                         <Link to='/'><b className='text-center'>Rhidys Cook Book</b> <br />Copyright<MdOutlineCopyright className='text-xl inline ml-2'/>2022 RhidysCookBook.web.app</Link>
                     </div>
                     <div className="md:place-self-center md:justify-self-end">

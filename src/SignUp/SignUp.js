@@ -4,12 +4,12 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
-const Register = () => {
+const SignUp = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
     const {
-        createUser, emailVerify, profileUpdate, registerWithGoogle, registerWithGithub, setUser, setToaster
+        createUser, profileUpdate, registerWithGoogle, setUser, setToaster
     } = useContext(AuthContext);
 
     const handleSubmit = (event) => {
@@ -21,13 +21,16 @@ const Register = () => {
         const fullName = form.fullName.value;
         createUser(email, password)
             .then(result => {
-
                 form.reset('');
-                handleEmailVerify();
+                
+                    toast('Good Job!', {
+                        icon: '👏',
+                    })
                 setUser(result.user);
                 handleProfileUpdate(photoURL, fullName);
             })
             .catch(error => console.log(error))
+            .finally(() => setToaster(false));
     }
     const handleProfileUpdate = (photoURL, fullName) => {
         const profile = {
@@ -38,15 +41,7 @@ const Register = () => {
             .then(() => { })
             .catch(error => console.log(error))
     }
-    const handleEmailVerify = () => {
-        emailVerify()
-            .then(() => {
-                toast('Good Job!', {
-                    icon: '👏',
-                })
-            })
-            .catch(error => console.log(error))
-    }
+   
     const handleRegisterWithGoogle = () => {
         registerWithGoogle()
             .then(result => {
@@ -80,27 +75,27 @@ const Register = () => {
                                     <label className="label">
                                         <span className="label-text">Full Name</span>
                                     </label>
-                                    <input type="text" placeholder="Your name" className="input input-bordered" name='fullName' required />
+                                    <input type="text" placeholder="Enter your Full Name" className="input input-bordered" name='fullName' required />
                                 </div>
 
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="text" placeholder="Your email" className="input input-bordered" name='email' required />
+                                    <input type="text" placeholder="Enter your email" className="input input-bordered" name='email' required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="text" placeholder="password" className="input input-bordered" name='password' required />
+                                    <input type="text" placeholder="Enter your password" className="input input-bordered" name='password' required />
 
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Photo</span>
                                     </label>
-                                    <input type="text" placeholder="Your profile picture URL" className="input input-bordered" name='photoURL' required />
+                                    <input type="text" placeholder="Enter your profile picture URL" className="input input-bordered" name='photoURL' required />
                                     <label className="label">
                                         <small>Have an account? <Link to='/login' className='link link-accent'>Sign In</Link> </small>
                                     </label>
@@ -127,4 +122,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default SignUp;

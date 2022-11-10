@@ -4,7 +4,7 @@ import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Services from "../Pages/Services/Services";
-import SignUp from "../Pages/SignUp/SignUp";
+import SignUp from '../Pages/SignUp/SignUp'
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/signup',
-                element: <SignUp></SignUp>,
+                element: <SignUp></SignUp>
             },
             {
                 path: '/services',
