@@ -60,7 +60,7 @@ const Header = () => {
                             user?.uid ?
                                 <nav >
                                     <Link className="btn  btn-outline mr-2" onClick={handleLogOut}>Sign Out</Link>
-                                    <img src={user?.photoURL} alt="" className='rounded-full w-12 ' />
+                                    <Link><img src={user?.photoURL} alt="" className='rounded-full w-12 inline ml-1'/></Link>
 
                                 </nav>
 

@@ -10,7 +10,7 @@ const SignUp = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
     const {
-        createUser, profileUpdate, registerWithGoogle, setUser, setToaster
+        createUser, profileUpdate, registerWithGoogle, setUser, setSpinner
     } = useContext(AuthContext);
 
     const handleSubmit = (event) => {
@@ -23,15 +23,15 @@ const SignUp = () => {
         createUser(email, password)
             .then(result => {
                 form.reset('');
-                
-                    toast('Good Job!', {
+                toast('Good Job!', {
                         icon: '👏',
-                    })
+                })
                 setUser(result.user);
                 handleProfileUpdate(photoURL, fullName);
             })
             .catch(error => console.log(error))
-            .finally(() => setToaster(false));
+            .finally(() => setSpinner(false));
+            
     }
     const handleProfileUpdate = (photoURL, fullName) => {
         const profile = {
@@ -48,6 +48,7 @@ const SignUp = () => {
             .then(result => {
 
                 const user = result.user;
+                console.log(user.uid)
                 if (user.uid) {
                     toast('Good Job!', {
                         icon: '👏',
@@ -60,12 +61,12 @@ const SignUp = () => {
                 }
             })
             .catch(error => console.log(error))
-            .finally(() => setToaster(false));
+            .finally(() => setSpinner(false));
     }
     
     return (
         <div>
-            <div className="hero mx-auto my-20 w-9/12 bg-zinc-500">
+            <div className="hero mx-auto my-20 w-9/12 bg-zinc-300">
                 <div className="hero-content flex-col-reverse  lg:justify-between">
 
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
