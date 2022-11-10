@@ -27,12 +27,7 @@ const Header = () => {
                                 <Link className='mb-3' to='/services'>Services</Link>
                                 <Link className='mb-3' to='/blogs'>Blogs</Link>
                                 
-                                <nav className="form-control">
-                                    <label className="label cursor-pointer">
-                                        <span className="label-text">Mode</span>
-                                        <input type="checkbox" className="toggle" />
-                                    </label>
-                                </nav>
+                                
                                 <nav >
                                     {
                                         user?.uid ?
