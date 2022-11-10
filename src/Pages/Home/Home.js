@@ -1,19 +1,13 @@
 import React from 'react';
-import {MdFoodBank} from 'react-icons/md'
-import { Link } from 'react-router-dom';
+import Banner from './Banner/Banner';
+import Customer from './Customer/Customer';
+
+
 const Home = () => {
     return (
         <div>
-            <div className="hero min-h-screen bg-cover" style={{ backgroundImage: `url("banner.jpg")` }}>
-                <div className="hero-overlay bg-opacity-70"></div>
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-6xl font-bold">Welcome Foody People!!!</h1>
-                        <p className="mb-5">We are reday to serve homemade food, desert and your personal preferences organic food only for you.</p>
-                        <button className="btn btn-outline btn-accent"><Link to='/signup'>Join our home </Link><MdFoodBank className='text-lg ml-3'/></button>
-                    </div>
-                </div>
-            </div>
+            <Banner></Banner>
+            <Customer></Customer>
         </div>
     );
 };
