@@ -9,7 +9,7 @@ const Services = () => {
     const services = useLoaderData();
     console.log(services)
     return (
-        <div >
+        <div>
             <h2 className='mt-4 p-6 text-3xl text-center font-semibold'>Our  Services:</h2>
             <div className='grid grid-cols-2 gap-4'>
 
@@ -30,7 +30,7 @@ const Services = () => {
                                             <p>{service.details}</p>
                                     }
                                     <div className="card-actions">
-                                        <Link  className="btn btn-outline btn-accent">Details</Link>
+                                        <Link to={`services/${service._id}`} className="btn btn-outline btn-accent">Details</Link>
                                     </div>
                                 </div>
                             </div>
