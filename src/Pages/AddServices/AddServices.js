@@ -1,13 +1,13 @@
 import React from 'react';
 import { useTitle } from '../TitleHooks/useTitle';
 
-const Services = () => {
-    useTitle('Our-Services-Page')
+const AddServices = () => {
+    useTitle('Add-Services-Page')
     return (
         <div>
-            
+            addd services
         </div>
     );
 };
 
-export default Services;
+export default AddServices;

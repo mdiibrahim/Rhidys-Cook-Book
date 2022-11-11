@@ -3,9 +3,11 @@ import toast from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import { useTitle } from '../TitleHooks/useTitle';
 
 
 const SignUp = () => {
+    useTitle('SignUp-Page')
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';

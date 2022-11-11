@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTitle } from '../TitleHooks/useTitle';
 
 
 const Error = () => {
+    useTitle('404-Error! Cannot found the page')
     return (
         <div>
             <div className="card mx-auto bg-base-100 shadow-xl image-full mt-44" style={{ width: "700px" }}>

@@ -5,7 +5,9 @@ import { useContext } from 'react';
 
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Context/AuthProvider';
+import { useTitle } from '../TitleHooks/useTitle';
 const Login = () => {
+    useTitle('Login-Page')
     const { logIn, setSpinner, registerWithGoogle, setUser } = useContext(AuthContext);
 
     const navigate = useNavigate();
