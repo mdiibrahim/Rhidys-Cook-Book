@@ -25,6 +25,7 @@ const ServicesAtHome = ({ servicesAtHome }) => {
                                                 :
                                                 <p>{service.details}</p>
                                         }
+                                        <h2>Price: <span className='font-bold text-lg mt-2'>${ service.price}</span></h2>
                                         <div className="card-actions">
                                             <Link to={`services/${service._id}`} className="btn btn-outline btn-accent">Details</Link>
                                         </div>

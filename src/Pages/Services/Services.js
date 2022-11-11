@@ -7,7 +7,6 @@ const Services = () => {
     //for title
     useTitle('Our-Services');
     const services = useLoaderData();
-    console.log(services)
     return (
         <div>
             <h2 className='mt-4 p-6 text-3xl text-center font-semibold'>Our  Services:</h2>
@@ -29,8 +28,9 @@ const Services = () => {
                                             :
                                             <p>{service.details}</p>
                                     }
+                                    <h2>Price: <span className='font-bold text-lg mt-2'>${ service.price}</span></h2>
                                     <div className="card-actions">
-                                        <Link to={`services/${service._id}`} className="btn btn-outline btn-accent">Details</Link>
+                                        <Link to={`/${service._id}`} className="btn btn-outline btn-accent">Details</Link>
                                     </div>
                                 </div>
                             </div>

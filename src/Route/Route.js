@@ -33,9 +33,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/services/:id',
-                loader: () =>  fetch('https://rhidys-cook-book-server-side.vercel.app/services'),
+                loader: ({params}) =>  fetch(`http://localhost:5000/services/${params.id}`),
                 element: <ServicesDetails></ServicesDetails>
             },
+            {
+                path: '/:id',
+                loader: ({params}) =>  fetch(`http://localhost:5000/${params.id}`),
+                element: <ServicesDetails></ServicesDetails>
+            },
+            
             {
                 path: '/blogs',
                 element: <Blogs></Blogs>
