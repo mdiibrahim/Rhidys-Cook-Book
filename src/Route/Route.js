@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import MyReviews from "../Pages/MyReviews/MyReviews";
 import Services from "../Pages/Services/Services";
+import ServicesDetails from "../Pages/ServicesDetails/ServicesDetails";
 import SignUp from "../Pages/SignUp/SignUp"
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 const { createBrowserRouter } = require("react-router-dom");
@@ -29,6 +30,11 @@ export const router = createBrowserRouter([
                 path: '/services',
                 loader: () =>  fetch('https://rhidys-cook-book-server-side.vercel.app/services'),
                 element: <Services></Services>,
+            },
+            {
+                path: '/services/:id',
+                loader: () =>  fetch('https://rhidys-cook-book-server-side.vercel.app/services'),
+                element: <ServicesDetails></ServicesDetails>
             },
             {
                 path: '/blogs',

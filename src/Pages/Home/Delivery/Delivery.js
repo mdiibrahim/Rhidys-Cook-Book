@@ -6,7 +6,7 @@ const Delivery = () => {
         <div>
             <div className="hero min-h-max bg-amber-100 ">
                 <div className="hero-content py-16 flex-col lg:flex-row">
-                    <img src="delivery.jpg" alt='' className="max-w-xl rounded-lg shadow-2xl" />
+                    <img src="delivery.jpg" alt='' className="md:max-w-xl rounded-lg shadow-2xl" />
                     <div>
                         <h1 className="text-5xl font-bold">Hey food  lovers!</h1>
                         <p className="py-6">The fresh, healthy food delivery services in your city.</p>
