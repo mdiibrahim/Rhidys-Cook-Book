@@ -51,7 +51,7 @@ const SignUp = () => {
             .then(result => {
 
                 const user = result.user;
-                console.log(user.uid)
+                
                 if (user.uid) {
                     toast('Good Job!', {
                         icon: '👏',
