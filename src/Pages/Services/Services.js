@@ -2,7 +2,8 @@ import React from 'react';
 import { useTitle } from '../TitleHooks/useTitle';
 
 const Services = () => {
-    useTitle('Our-Services-Page')
+    //for title
+    useTitle('Our-Services')
     return (
         <div>
             

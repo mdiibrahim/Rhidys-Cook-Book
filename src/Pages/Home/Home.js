@@ -5,6 +5,7 @@ import Customer from './Customer/Customer';
 
 
 const Home = () => {
+    //for title
     useTitle('Rhidys-Cook-Book-Home')
     return (
         <div>

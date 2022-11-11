@@ -4,6 +4,7 @@ import { useTitle } from '../TitleHooks/useTitle';
 
 
 const Error = () => {
+    //for title
     useTitle('404-Error! Cannot found the page')
     return (
         <div>

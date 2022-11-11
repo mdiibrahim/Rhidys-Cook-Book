@@ -7,7 +7,8 @@ import { useTitle } from '../TitleHooks/useTitle';
 
 
 const SignUp = () => {
-    useTitle('SignUp-Page')
+    //for title
+    useTitle('Join-Our-Home')
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
