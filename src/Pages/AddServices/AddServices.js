@@ -1,4 +1,5 @@
 import React, { useContext} from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import { useTitle } from '../TitleHooks/useTitle';
@@ -7,9 +8,10 @@ const AddServices = () => {
     //for title
     useTitle('Add-Services');
     const { setAddedServices } = useContext(AuthContext);
+
     const services = useLoaderData();
     const handleAddServices = (id) => {
-        console.log(id)
+        toast.success("Add a services succesfully");
         setAddedServices(id);
         
     }

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+
 import { AuthContext } from '../../../Context/AuthProvider';
 
 const MyAddedServices = () => {
@@ -8,7 +9,10 @@ const MyAddedServices = () => {
         const url = `https://rhidys-cook-book-server-side.vercel.app/services/${addedServices}`;
         fetch(url)
             .then(res => res.json())
-            .then(data => setMyAdding(data))
+            .then(data => {
+                
+                setMyAdding(data)
+            })
     }, [addedServices]);
 
     return (
@@ -17,9 +21,9 @@ const MyAddedServices = () => {
                 {
                 
                     myAdding?._id ?
-                        <div className='grid md:grid-cols-4 grid-cols-2'>
+                        <div className='grid grid-cols-2'>
 
-                        <div className="card sm:w-2/4  bg-base-100 shadow-xl image-full">
+                        <div className="card sm:w-full  bg-base-100 shadow-xl image-full">
                             <figure><img src={myAdding.img} alt="img" className='max-h-96' /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">{myAdding.name}</h2>

@@ -12,3 +12,5 @@ iii)Tailwind css: (https://tailwindcss.com/) for css framework,
 iv)DaisyUI: (https://daisyui.com/components/) for more functionality and components of tailwind css,
 
 v)React-router-dom: (https://reactrouter.com/en/main) for the better performance rounting and single page application,
+
+vi)React-hot-toast: (https://react-hot-toast.com/) to show a alert
