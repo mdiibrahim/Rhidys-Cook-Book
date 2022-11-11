@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='min-h-screen relative'>
             <div className=' absolute bottom-0 w-full'>
 
-                <footer className="footer p-10 bg-base-200 text-base-content">
+                <footer className="footer p-10 bg-black text-white">
                     <div>
                         <span className="footer-title">Services</span>
                         <Link to='/services'>Services</Link>
@@ -25,7 +25,7 @@ const Footer = () => {
                         <Link>About us</Link>
                     </div>
                 </footer>
-                <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300  mx-auto">
+                <footer className="footer px-10 py-4 border-t bg-black text-white border-base-300  mx-auto">
                     <div className="items-center grid-flow-col">
                         <img src="logo.png" className='w-16' alt="" />
                         <Link to='/'><b className='text-center'>Rhidys Cook Book</b> <br />Copyright<MdOutlineCopyright className='text-xl inline ml-2'/>2022 RhidysCookBook.web.app</Link>

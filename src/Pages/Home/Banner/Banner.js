@@ -3,7 +3,7 @@ import {MdFoodBank} from 'react-icons/md'
 import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
-        <div>
+        <div className=''>
             <div className="hero min-h-screen bg-cover" style={{ backgroundImage: `url("banner.jpg")` }}>
                 <div className="hero-overlay bg-opacity-70"></div>
                 <div className="hero-content text-center text-neutral-content">
