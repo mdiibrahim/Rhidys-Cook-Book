@@ -1,5 +1,6 @@
 import Main from "../Layout/Main";
 import Error from "../Pages/404/404";
+import AddReview from "../Pages/AddReview/AddReview";
 import AddServices from "../Pages/AddServices/AddServices";
 import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home";
@@ -8,6 +9,7 @@ import MyReviews from "../Pages/MyReviews/MyReviews";
 import Services from "../Pages/Services/Services";
 import ServicesDetails from "../Pages/ServicesDetails/ServicesDetails";
 import SignUp from "../Pages/SignUp/SignUp"
+import PrivateReviewRoute from "./PrivateReviewRoute/PrivateReviewRoute";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -18,30 +20,35 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                loader: () =>  fetch('https://rhidys-cook-book-server-side.vercel.app/services-at-home'),
+                loader: () => fetch('https://rhidys-cook-book-server-side.vercel.app/services-at-home'),
                 element: <Home></Home>,
             },
             {
                 path: '/login',
                 element: <Login></Login>,
             },
-           
+
             {
                 path: '/services',
-                loader: () =>  fetch('https://rhidys-cook-book-server-side.vercel.app/services'),
+                loader: () => fetch('https://rhidys-cook-book-server-side.vercel.app/services'),
                 element: <Services></Services>,
             },
             {
                 path: '/services/:id',
-                loader: ({params}) =>  fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({ params }) => fetch(`https://rhidys-cook-book-server-side.vercel.app/services/${params.id}`),
                 element: <ServicesDetails></ServicesDetails>
             },
             {
                 path: '/:id',
-                loader: ({params}) =>  fetch(`http://localhost:5000/${params.id}`),
+                loader: ({ params }) => fetch(`https://rhidys-cook-book-server-side.vercel.app/services/${params.id}`),
                 element: <ServicesDetails></ServicesDetails>
             },
-            
+            {
+                path: '/reviews/:id',
+                loader: ({ params }) => fetch(`https://rhidys-cook-book-server-side.vercel.app/services/${params.id}`),
+                element: <PrivateReviewRoute><AddReview></AddReview></PrivateReviewRoute>
+            },
+
             {
                 path: '/blogs',
                 element: <Blogs></Blogs>
@@ -60,6 +67,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/add-services',
+                loader: () => fetch('https://rhidys-cook-book-server-side.vercel.app/services'),
                 element: <PrivateRoute><AddServices></AddServices></PrivateRoute>,
             }
         ]

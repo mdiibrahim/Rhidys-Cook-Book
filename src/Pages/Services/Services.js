@@ -18,6 +18,7 @@ const Services = () => {
                             <div key={service._id}>
                             <div className="card w-full bg-base-100 shadow-xl ">
                                 <figure className="px-6 pt-10">
+                                    
                                     <img src={service.img} alt="img" className="rounded-xl max-h-96" />
                                 </figure>
                                 <div className="card-body items-center text-center">
