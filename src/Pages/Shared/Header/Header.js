@@ -63,7 +63,7 @@ const Header = () => {
                             </nav>
                         </ul>
                     </nav>
-                    <Link to='/' className="btn btn-ghost normal-case text-3xl"><img src="logo.png" className='w-8 mr-1 rounded-xl' alt="" />Rhidy's Cook Book</Link>
+                    <Link to='/' className="btn btn-ghost normal-case sm:text-3xl text-2xl"><img src="logo.png" className='w-8 mr-1 rounded-xl' alt="" />Rhidy's Cook Book</Link>
                 </nav>
                 <nav className="navbar-center hidden xl:grid grid-cols-1 ">
                     <>

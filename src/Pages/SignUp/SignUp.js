@@ -69,7 +69,7 @@ const SignUp = () => {
     
     return (
         <div>
-            <div className="hero mx-auto my-20 w-9/12 bg-zinc-300">
+            <div className="hero mx-auto py-16 md:w-9/12 bg-zinc-300">
                 <div className="hero-content flex-col-reverse  lg:justify-between">
 
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
