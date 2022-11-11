@@ -3,7 +3,7 @@ import React from 'react';
 const Customer = () => {
     return (
         <div className=''>
-            <h1 className='text-3xl text-center mt-16 mb-4 font-semibold'>Our dedicated Partners: </h1>
+            <h1 className='mt-4 p-6 text-3xl text-center font-semibold'>Our dedicated Partners: </h1>
             <div className='grid md:grid-cols-7 grid-cols-4 gap-1 '>
                <img className='rounded-2xl' src='res 1.png' alt=''/>
                <img src='res 2.png' alt=''  className='rounded-2xl'/>

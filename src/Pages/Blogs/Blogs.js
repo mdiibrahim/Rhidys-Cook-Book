@@ -5,8 +5,8 @@ const Blogs = () => {
     //for title
     useTitle('Our-Blogs')
     return (
-        <div className='mt-24'>
-            <h1 className='text-center text-5xl mb-8'>Our Blogs: </h1>
+        <div className='mt-4'>
+            <h2 className='mt-4 p-6 text-5xl text-center font-semibold'>Our  Blogs:</h2>
             <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                 <div className="collapse-title text-xl font-medium">
                     Difference between SQL and NoSQL
