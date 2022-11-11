@@ -9,17 +9,17 @@ const Services = () => {
     const services = useLoaderData();
     console.log(services)
     return (
-        <div>
+        <div >
             <h2 className='mt-4 p-6 text-3xl text-center font-semibold'>Our  Services:</h2>
+            <div className='grid grid-cols-2 gap-4'>
+
             {
                 services.map(service => {
                     return (
-                        <div key={service._id}  className='grid grid-cols-2'>
-
-                        <div className=''>
+                            <div key={service._id}>
                             <div className="card w-full bg-base-100 shadow-xl ">
-                                <figure className="px-10 pt-10">
-                                    <img src={service.img} alt="img" className="rounded-xl" />
+                                <figure className="px-6 pt-10">
+                                    <img src={service.img} alt="img" className="rounded-xl max-h-96" />
                                 </figure>
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">{ service.name}</h2>
@@ -35,10 +35,11 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
-                        </div>
+                        
                     )
                 })
             }
+            </div>
         </div>
     );
 };
